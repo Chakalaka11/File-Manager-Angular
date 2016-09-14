@@ -1,5 +1,5 @@
 
-var url = "http://locationapiapp.azurewebsites.net/api/default/getContent?callback=JSON_CALLBACK/";
+var url = "https://locationapiapp.azurewebsites.net/api/default/getContent/";
 
 
 app.controller('MainPageContr', function ($scope, $http) {
@@ -19,7 +19,6 @@ app.controller('MainPageContr', function ($scope, $http) {
             if (clicked == "../") {
                 var preEndSlashIndex =$scope.absolutePath.lastIndexOf("\\",$scope.absolutePath.length-2)+1;
                 $scope.absolutePath = $scope.absolutePath.substring(0, preEndSlashIndex);
-
             }
             else {
                 $scope.absolutePath = $scope.absolutePath  + clicked+ "\\";
